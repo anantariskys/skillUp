@@ -9,7 +9,7 @@ const FeatureCard:FC<{img:string, title:string ,description:string,slot?:number,
         <img src={img} alt={title} className="w-24 aspect-square object-contain" draggable="false" />
         <p className="font-semibold text-lg">{title}</p>
       </div>
-      <p className="text-lg font-semibold">{description}</p>
+      <p className=" font-semibold">{description}</p>
       <small className="text-gray-500 font-semibold">
         {slot} Lowongan Tersedia
       </small>
