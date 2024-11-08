@@ -16,9 +16,11 @@
     "@remix-run/serve": "^2.13.1",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
+    "@iconify/react": "^5.0.2",
     "@remix-run/dev": "^2.13.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
