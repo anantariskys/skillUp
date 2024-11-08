@@ -41,7 +41,7 @@ const course = () => {
         </div>
         <div></div>
       </section>
-      <section className="container grid md:grid-cols-3 grid-cols-1 lg:grid-cols-5 gap-4 py-8">
+      <section className="container grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 gap-4 py-8">
         {
           dummyCourse.map((item) => (
             <CourseCard
