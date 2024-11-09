@@ -41,7 +41,6 @@ const Dashboard: React.FC = () => {
         const userId = user?.uid;
         const userRef = doc(db, "users", userId);
         const userSnap = await getDoc(userRef);
-
         if (userSnap.exists()) {
           setUserData(userSnap.data());
         } else {
