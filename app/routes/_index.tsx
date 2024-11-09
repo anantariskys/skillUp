@@ -6,10 +6,10 @@ import Roket from '../assets/rocket.png';
 import Lampu from '../assets/lamp.png';
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "SkillUp!" },
   ];
 };
+
 
 export default function Index() {
   return (
