@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "~/config/firebase";
 import PageLayouts from "~/layouts/PageLayouts";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,13 +13,61 @@ import SectionLayout from "~/layouts/SectionLayout";
 import TestimonialaCard from "~/components/TestimonialaCard";
 import CarouselContent from "../assets/carousel_content.png";
 import { dataFeature, testimonial } from "~/data/dummy";
+import { json, LoaderFunction, redirect } from "@remix-run/node";
+import { getSession } from "~/utils/session.server";
+import { useLoaderData } from "@remix-run/react";
 
+export const loader: LoaderFunction = async ({ request }) => {
+  const session = await getSession(request.headers.get("Cookie"));
+  const uid = session.get("uid");
 
+  if (!uid) {
+    return redirect("/login");
+  }
 
-const dashboard = () => {
+  return json({ uid });
+};
+const Dashboard: React.FC = () => {
+  const [userData, setUserData] = useState<any>(null);
+
+  const user = useLoaderData<{ uid: string }>();
+
+  console.log(user);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const userId = user?.uid;
+        const userRef = doc(db, "users", userId);
+        const userSnap = await getDoc(userRef);
+
+        if (userSnap.exists()) {
+          setUserData(userSnap.data());
+        } else {
+          console.log("No such user data!");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <p className="animate-bounce text-2xl font-semibold">Loading...</p>
+      </div>
+    );
+  }
+
   return (
-    <PageLayouts>
-      <SectionLayout title="Selamat datang, Uzman!">
+    <PageLayouts userData={userData}>
+      <SectionLayout title={`Selamat datang, ${userData?.name || "Uzman"}!`}>
         <Swiper
           modules={[Navigation, Pagination]}
           navigation
@@ -82,4 +133,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;
