@@ -2,10 +2,10 @@ import React, { FC } from 'react'
 import Footer from '~/components/Footer'
 import Navbar from '~/components/Navbar'
 
-const PageLayouts:FC<{children : React.ReactNode}> = ({children}) => {
+const PageLayouts:FC<{children : React.ReactNode,userData? : {name : string}}> = ({children,userData}) => {
   return (
     <div className=''>
-        <Navbar position='relative' variant/>
+        <Navbar userData={userData} position='relative' variant/>
         {children}
         <Footer/>
 
