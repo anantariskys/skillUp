@@ -14,11 +14,13 @@
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
     "@remix-run/serve": "^2.13.1",
+    "@supabase/supabase-js": "^2.46.1",
     "firebase": "^11.0.1",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "uuid": "^11.0.2"
   },
   "devDependencies": {
     "@iconify/react": "^5.0.2",
