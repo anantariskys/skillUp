@@ -22,7 +22,8 @@ export default {
           DEFAULT: "1rem",
           sm: "2rem",
           lg: "3rem",
-
+  
+       
         }
       },
       colors:{
