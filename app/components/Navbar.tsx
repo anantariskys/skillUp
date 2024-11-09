@@ -20,9 +20,11 @@ const Navbar: FC<{
   return (
     <nav className={`py-4 ${position} top-0 w-full`}>
       <main className="container flex items-center justify-between text-primary">
+        <Link to={'/'}>
         <img src={logo} className="w-32" draggable="false" alt="logo" />
+        </Link>
         <div className="hidden md:flex gap-4 items-center ">
-          <p>Beranda</p>
+          <Link to={'/home'}>Beranda</Link>
           <p>Artikel</p>
           <p>Chatbot</p>
           <p>Profile</p>
@@ -53,7 +55,7 @@ const Navbar: FC<{
               )}
             </div>
           ) : (
-            <Link to={"/login"}>
+            <Link to={"/home"}>
               <Button width="w-fit" type="button" variant="default">
                 Mulai Gratis
               </Button>
