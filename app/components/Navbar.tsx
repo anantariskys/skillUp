@@ -18,7 +18,7 @@ const Navbar: FC<{
   const logo = variant ? LogoBiru : LogoPutih;
 
   return (
-    <nav className={`py-4 ${position} top-0 w-full`}>
+    <nav className={`py-4  top-0 w-full`}>
       <main className="container flex items-center justify-between text-primary">
         <Link to={'/'}>
         <img src={logo} className="w-32" draggable="false" alt="logo" />
