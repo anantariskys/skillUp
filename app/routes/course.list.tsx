@@ -4,14 +4,14 @@ import { doc, getDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import Button from "~/components/Button";
 import { db } from "~/config/firebase";
-import { supabase } from "~/config/supabase";
+
 import PageLayouts from "~/layouts/PageLayouts";
 import { getSession } from "~/utils/session.server";
 
 import dsImage from "../assets/courseDS.png";
-import NotificationCard from "~/components/NotificationCard";
+
 import { Icon } from "@iconify/react/dist/iconify.js";
-import Hero from "../assets/hero2.png";
+import img from '../assets/Hero Image 2.png'
 import { dummyClass } from "~/data/dummy";
 
 export const loader: LoaderFunction = async ({ request }) => {
@@ -95,7 +95,7 @@ const listCourse = () => {
               </Button>
             </div>
           </div>
-          <img src={Hero} draggable={false} alt="" />
+          <img src={img} draggable={false} alt="" />
           <div className="grid grid-cols-1 max-w-2xl w-full gap-4 mx-auto">
             {dummyClass.map((item, index) => (
                 <Link to={'/course/materi'}>
