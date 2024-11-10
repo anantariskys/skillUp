@@ -2,7 +2,9 @@ import Loker from "../assets/loker.png";
 import Mentoring from "../assets/mentoring.png";
 import Magang from "../assets/magang.png";
 import Kursus from "../assets/kursus.png";
-
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
 export const dataFeature = [
     {
       title: "Loker",
@@ -111,7 +113,6 @@ export const dataFeature = [
     },
   ];
   
-
   export const testimonial = [
     {
       name: "Park Jeongwoo",
@@ -163,3 +164,38 @@ export const dataFeature = [
       img:'xsgames.co/randomusers/avatar.php?g=male'
     },
   ];
+
+
+  export const dummyClass =[
+    {
+      "title": "Pengenalan Python untuk Analisis Data",
+      "duration": "15 mnt",
+      img : `${img1}`
+    },
+    {
+      "title": "Manipulasi Data dengan Pandas",
+      "duration": "50 mnt",
+      img : `${img2}`
+    },
+    {
+      "title": "Visualisasi Data Dasar dengan Matplotlib",
+      "duration": "50 mnt",
+      img : `${img3}`
+    },
+    {
+      "title": "Visualisasi Data Lanjutan dengan Seaborn",
+      "duration": "50 mnt",
+      img : `${img1}`
+    },
+    {
+      "title": "Analisis Data Eksploratif (Exploratory Data Analysis - EDA)",
+      "duration": "50 mnt",
+      img : `${img2}`
+    },
+    {
+      "title": "Pengenalan Statistik untuk Analisis Data",
+      "duration": "50 mnt",
+      img : `${img3}`
+    }
+  ]
+  
