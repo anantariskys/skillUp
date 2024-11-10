@@ -1,15 +1,17 @@
 import { Icon } from '@iconify/react/dist/iconify.js'
 import Button from './Button'
 import { FC } from 'react'
+import { Link } from '@remix-run/react'
 
 interface CourseCardProps {
+  id:number,
     name: string,
     img : string,
     price: number,
     pertemuan : number
 
 }
-const CourseCard:FC<CourseCardProps> = ({img,name,price,pertemuan}) => {
+const CourseCard:FC<CourseCardProps> = ({img,name,price,pertemuan,id}) => {
   return (
     <div className="p-4 rounded-xl border space-y-1">
     <img
@@ -28,9 +30,11 @@ const CourseCard:FC<CourseCardProps> = ({img,name,price,pertemuan}) => {
       {name}
     </p>
     <p className="text-primary">Rp.{price}</p>
+    <Link to={`/course/${id}`}>
     <Button width="w-full" type="button" variant="default">
       Lihat Selengkapnya
     </Button>
+    </Link>
   </div>
   )
 }
