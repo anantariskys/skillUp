@@ -4,13 +4,13 @@ import { getFirestore, Firestore } from "firebase/firestore";
 import { getStorage, FirebaseStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBppBvk6D4D3o--GsoNRMRfcVI3M4WyIUk",
-  authDomain: "joki-35417.firebaseapp.com",
-  projectId: "joki-35417",
-  storageBucket: "joki-35417.appspot.com",
-  messagingSenderId: "289602371931",
-  appId: "1:289602371931:web:02e56acb2f9d83a9ae5a7e",
-  measurementId: "G-LHPDHTF15T",
+  apiKey: "AIzaSyD9ou07xRM-5_BXJB3XJudBy68v6ZwOHSo",
+  authDomain: "skillup-a9252.firebaseapp.com",
+  projectId: "skillup-a9252",
+  storageBucket: "skillup-a9252.firebasestorage.app",
+  messagingSenderId: "1043254154857",
+  appId: "1:1043254154857:web:6e8b3fda4f2f5ba5e934f8",
+  measurementId: "G-BVR1RJSPHR"
 };
 
 // Initialize Firebase
