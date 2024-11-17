@@ -8,6 +8,7 @@ const sessionStorage = createCookieSessionStorage({
     secure: process.env.NODE_ENV === "production",
     secrets: [process.env.SESSION_SECRET || "secret"],
     sameSite: "lax",
+    maxAge: 60 * 60 ,
   },
 });
 
